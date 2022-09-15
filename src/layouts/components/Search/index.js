@@ -12,7 +12,7 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Search.module.scss';
 import AccountItem from '~/components/AccountItem';
 import { useDebounce } from '~/hooks';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 
 const cx = classNames.bind(styles);
 function Search() {
@@ -45,7 +45,15 @@ function Search() {
       fetchApi();
    }, [debounced]);
 
+   const handleChange = (e) => {
+      const searchValue = e.target.value;
+      if (!searchValue.startsWith(' ')) {
+         setSearchValue(e.target.value);
+      }
+   };
+
    return (
+      // Bọc thẻ div trong HeadlessTippy để tránh ăn log warning bạn nhé :))))
       <div>
          <HeadlessTippy
             interactive
@@ -67,7 +75,7 @@ function Search() {
                <input
                   ref={inputRef}
                   value={searchValue}
-                  onChange={(e) => setSearchValue(e.target.value)}
+                  onChange={handleChange}
                   onFocus={() => setShowResult(true)}
                   spellCheck={false}
                   placeholder="Search accounts and videos..."
@@ -86,7 +94,7 @@ function Search() {
 
                {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
 
-               <button className={cx('search-btn')}>
+               <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                   <FontAwesomeIcon icon={faMagnifyingGlass} />
                </button>
             </div>

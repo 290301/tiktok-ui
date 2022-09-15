@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
+
 //------import library
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/scale.css';
 
 //------import component
 import styles from './Header.module.scss';
@@ -12,10 +15,11 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import Search from '../Search';
+import config from '~/config';
 import {
    KeyboardIcon,
    MessageIcon,
-   NoiticeIcon,
+   NoticeIcon,
    ProfileIcon,
    QuestionIcon,
    CoinsIcon,
@@ -100,7 +104,9 @@ function Header() {
          <div className={cx('inner')}>
             {/* ----------------------------------Left Logo------------------------------------ */}
 
-            <Image src={images.logo} alt="Tiktok" />
+            <Link to={config.routes.home} className={cx('logo')}>
+               <Image src={images.logo} alt="Tiktok" />
+            </Link>
 
             {/* ----------------------------------Area Search------------------------------------ */}
             <Search />
@@ -108,19 +114,19 @@ function Header() {
             <div className={cx('actions')}>
                {currentUser ? (
                   <>
-                     <Tippy content="Upload video" placement="bottom">
+                     <Tippy animation="scale" content="Upload video" placement="bottom">
                         <button className={cx('action-btn')}>
                            <UploadIcon />
                         </button>
                      </Tippy>
-                     <Tippy content="Message" placement="bottom">
+                     <Tippy animation="scale" content="Message" placement="bottom">
                         <button className={cx('action-btn')}>
                            <MessageIcon width="24" height="24" />
                         </button>
                      </Tippy>
-                     <Tippy content="Notice" placement="bottom">
+                     <Tippy animation="scale" content="Notice" placement="bottom">
                         <button className={cx('action-btn')}>
-                           <NoiticeIcon />
+                           <NoticeIcon />
                         </button>
                      </Tippy>
                   </>
@@ -130,7 +136,7 @@ function Header() {
                      <Button primary>Login</Button>
                   </>
                )}
-               <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuOnChange}>
+               <Menu items={currentUser ? userMenu : MENU_ITEMS} hideOnClick={false} onChange={handleMenuOnChange}>
                   {currentUser ? (
                      <Image
                         className={cx('user-avartar')}

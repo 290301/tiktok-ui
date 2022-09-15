@@ -1,4 +1,4 @@
-export const UploadIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+export const UploadIcon = ({ width = '3.0rem', height = '3.0rem', className }) => (
    <svg
       className={className}
       width={width}
@@ -15,7 +15,7 @@ export const UploadIcon = ({ width = '3.2rem', height = '3.2rem', className }) =
    </svg>
 );
 
-export const MessageIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const MessageIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -32,7 +32,7 @@ export const MessageIcon = ({ className, width = '3.2rem', height = '3.2rem' }) 
    </svg>
 );
 
-export const NoiticeIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const NoticeIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -49,7 +49,7 @@ export const NoiticeIcon = ({ className, width = '3.2rem', height = '3.2rem' }) 
    </svg>
 );
 
-export const ProfileIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const ProfileIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -66,7 +66,7 @@ export const ProfileIcon = ({ className, width = '3.2rem', height = '3.2rem' }) 
    </svg>
 );
 
-export const CoinsIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const CoinsIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -88,7 +88,7 @@ export const CoinsIcon = ({ className, width = '3.2rem', height = '3.2rem' }) =>
    </svg>
 );
 
-export const SettingsIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const SettingsIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -105,7 +105,7 @@ export const SettingsIcon = ({ className, width = '3.2rem', height = '3.2rem' })
    </svg>
 );
 
-export const LanguageIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const LanguageIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -122,7 +122,7 @@ export const LanguageIcon = ({ className, width = '3.2rem', height = '3.2rem' })
    </svg>
 );
 
-export const QuestionIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const QuestionIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -139,7 +139,7 @@ export const QuestionIcon = ({ className, width = '3.2rem', height = '3.2rem' })
    </svg>
 );
 
-export const KeyboardIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const KeyboardIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -156,7 +156,7 @@ export const KeyboardIcon = ({ className, width = '3.2rem', height = '3.2rem' })
    </svg>
 );
 
-export const LogoutIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const LogoutIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}
@@ -172,7 +172,7 @@ export const LogoutIcon = ({ className, width = '3.2rem', height = '3.2rem' }) =
       ></path>
    </svg>
 );
-export const ArrowTopIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const ArrowTopIcon = ({ className, width = '3.0rem', height = '3.0rem' }) => (
    <svg
       className={className}
       width={width}

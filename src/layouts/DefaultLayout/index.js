@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 
 //------import component
 import styles from './DefaultLayout.module.scss';
-import Header from '~/components/Layout/components/Header';
+import Header from '~/layouts/components/Header';
 import Sidebar from './Sidebar';
 
 const cx = classNames.bind(styles);
